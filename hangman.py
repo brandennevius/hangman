@@ -1,15 +1,12 @@
 # Problem Set 2, hangman.py
 # Name: Branden Nevius
 # Collaborators: -
-# Time spent: 30 hours
+# Time spent: 15 hours
 # passed all tests from the test_hangman.py file on gitlab, as well as the function that I created.
 
 # Hangman Game
 # -----------------------------------
-# Helper code
-# You don't need to understand this helper code,
-# but you will have to know how to use the functions
-# (so be sure to read the docstrings!)
+
 import random
 import string
 import io
