@@ -18,7 +18,6 @@ WORDLIST_FILENAME = "words.txt"
 def load_words():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
-    
     Depending on the size of the word list, this function may
     take a while to finish.
     """
@@ -37,7 +36,6 @@ def load_words():
 def choose_word(wordlist):
     """
     wordlist (list): list of words (strings)
-    
     Returns a word from wordlist at random
     """
     return random.choice(wordlist)
@@ -103,9 +101,6 @@ def get_available_letters(letters_guessed):
       letters_not_guessed = letters_not_guessed.replace(letter,'')
     
     return letters_not_guessed
-    
-
-
     
 
 def hangman(secret_word):
@@ -200,8 +195,6 @@ def hangman(secret_word):
 
 # -----------------------------------
 
-
-
 def match_with_gaps(my_word, other_word):
     '''
     my_word: string with _ characters, current guess of secret word
@@ -276,9 +269,7 @@ def show_possible_matches(my_word):
             if count == finalCount:
                 print(i, end=" ")
     
-    
-
-
+   
 
 #test function for possible matches with words with multiple of the same letters
 
@@ -309,7 +300,6 @@ def show_possible_matches(my_word):
     #   print("TEST SUCCESSFUL")
     # else: 
     #   print("***FAILED TEST***  expected output: " + expected_output + "\nYour output: " + user_output)
-
 
 
 
@@ -411,13 +401,13 @@ def hangman_with_hints(secret_word):
 
 
 if __name__ == "__main__":
-    
+  
+    secret_word = choose_word(wordlist)
+    #hangman(secret_word)
     # To test part 2, comment out the pass line above and
     # uncomment the following two lines.
-    print(match_with_gaps("adva___ge_", "advantages"))
-    #secret_word = choose_word(wordlist)
-    #hangman(secret_word)
-    
+    #print(match_with_gaps("adva___ge_", "advantages"))
+   
     
 
     #secret_word = 'apple'
@@ -436,10 +426,13 @@ if __name__ == "__main__":
 
    #test_show_possible_matches()
 
-###############
+    ###############
     
     # To test part 3 re-comment out the above lines and 
     # uncomment the following two lines. 
+
+    secret_word = choose_word(wordlist)
+    hangman_with_hints(secret_word)
     
-    #secret_word = choose_word(wordlist)
-    #hangman_with_hints(secret_word)
+    
+  
