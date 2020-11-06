@@ -1,2 +1,2 @@
 # hangman
-Python game for hangman
+Hangman game implemented in python.
